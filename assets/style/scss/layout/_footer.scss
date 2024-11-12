@@ -1,0 +1,63 @@
+footer {
+  padding: 50px 0;
+  background-image: url("https://velikorodnov.com/wordpress/sushifushi/wp-content/uploads/2021/02/footer1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .footer_container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    img {
+      width: 200px;
+      margin-bottom: 70px;
+    }
+    ul {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      li {
+        border-right: 1px solid #aaa;
+        padding-right: 10px;
+        a {
+          color: #ca3c3f;
+          font-size: 18px;
+          font-family: Lato;
+        }
+      }
+    }
+    p {
+      color: #7a7879;
+      margin-bottom: 50px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    .footer_container {
+      img {
+        width: 200px;
+        margin-bottom: 70px;
+      }
+      ul {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+        li {
+          border-right: 1px solid #aaa;
+          padding-right: 5px;
+          a {
+            color: #ca3c3f;
+            font-size: 12px;
+            font-family: Lato;
+          }
+        }
+      }
+      p {
+        color: #7a7879;
+        margin-bottom: 50px;
+        font-size: 12px;
+      }
+    }
+  }
+}
