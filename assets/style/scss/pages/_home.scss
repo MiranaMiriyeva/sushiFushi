@@ -588,7 +588,11 @@
     width: 100%;
   }
 }
-
+@media only screen and (max-width: 768px) {
+  #image_section {
+    display: none;
+  }
+}
 // MAKE A RESERVATION
 #make_a_reservation {
   padding: 100px 0;
