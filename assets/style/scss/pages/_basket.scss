@@ -1,0 +1,92 @@
+#basket_main_section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 20px 100px;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      background-color: #dddee0;
+      border-collapse: collapse;
+
+      tr {
+        border: 1px solid #dddee0;
+        .product_th {
+          text-align: left;
+        }
+        th {
+          font-weight: 600;
+          color: #040a1c;
+          font-size: 18px;
+          font-family: Lato;
+          border: 1px solid #dddee0;
+          text-align: center;
+          padding: 15px 40px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        padding: 0 40px;
+        border-bottom: 1px solid #dddee0;
+        td {
+          padding: 0 40px;
+          text-align: center;
+
+          i {
+            color: #ca3c3f;
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+        .product_td {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          max-width: 500px;
+          img {
+            width: 100px;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+            h2 {
+              font-weight: 500;
+              font-size: 22px;
+              color: #040a1c;
+            }
+            p {
+              font-size: 14px;
+              color: #a8a7a8;
+            }
+          }
+        }
+      }
+    }
+  }
+  .addings {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    gap: 20px;
+    padding: 15px 60px;
+    .removeAll {
+      color: #ca3c3f;
+      font-size: 18px;
+      font-family: Lato;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .subtotal {
+      color: #040a1c;
+      font-size: 18px;
+      font-family: Lato;
+      font-weight: 400;
+      background-color: #dddee0;
+      padding: 20px;
+    }
+  }
+}

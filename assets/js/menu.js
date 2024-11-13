@@ -3,7 +3,6 @@ let responsiveMenu = document.querySelector(".responsive_menu");
 let responsiveLink = document.querySelectorAll(".responsive_link");
 
 let isOpen = false;
-console.log(hamburgerBtn);
 hamburgerBtn.addEventListener("click", () => {
   if (!isOpen) {
     hamburgerBtn.classList.add("is-active");
@@ -70,7 +69,6 @@ function handleTextContent(item) {
                src=${item.img}
                alt=${item.name}
              />
-           
      <p class="menu__item__name">${item.name}</p>
      <span>${item.category}</span>
       <span>${item.piece ? ` | ` + item.piece : ""}</span>
@@ -91,7 +89,7 @@ function handleTextContent(item) {
          }
  
        </div>
-       <div class="menu__item__basket_button">
+       <div id="${item.id}" class="menu__item__basket_button">
          <i class="fa-solid fa-basket-shopping"></i>
        </div>
      </div>
@@ -102,4 +100,39 @@ function handleTextContent(item) {
      }   
    </div>
        `;
+
+  let basketBtn = document.querySelectorAll(".menu__item__basket_button");
+  basketBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let localBasket = [];
+      let obj = {};
+      if (JSON.parse(localStorage.getItem("basket"))) {
+        localBasket = JSON.parse(localStorage.getItem("basket"));
+        // localBasket.forEach((localBasketItem) => {
+        let localBasketItem = localBasket.find((item) => item.id === btn.id);
+        if (localBasketItem) {
+          localBasketItem.count += 1;
+          localStorage.setItem("basket", JSON.stringify(localBasket));
+          console.log("count artdi");
+        } else {
+          obj = {
+            id: btn.id,
+            count: 1,
+          };
+          localBasket.push(obj);
+          localStorage.setItem("basket", JSON.stringify(localBasket));
+          console.log("yeni elem elave olundu");
+        }
+      } else {
+        obj = {
+          id: btn.id,
+          count: 1,
+        };
+        localBasket.push(obj);
+        localStorage.setItem("basket", JSON.stringify(localBasket));
+        console.log("ilk elem elave olundu");
+      }
+      console.log(btn.id);
+    });
+  });
 }

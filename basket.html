@@ -22,7 +22,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="assets/style/css/main.css" />
-    <title>Susi Fushi | Menu</title>
+    <title>Susi Fushi | Basket</title>
   </head>
   <body>
     <header>
@@ -102,71 +102,30 @@
         </div>
       </div>
     </header>
-
-    <main id="menu_main">
-      <aside>
-        <input type="text" placeholder="Search.." />
-
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/6920/6920151.png "
-            alt=""
-          />
-          <h2 class="categories_item_value">All Menu</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/6594/6594751.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Sushi Rolls</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/5036/5036109.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Nigiri</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/2276/2276941.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Noodles</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/1921/1921285.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Snacks</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/16406/16406739.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Soups</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/7327/7327727.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Sauces</h2>
-        </div>
-        <div class="categories_item">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/536/536658.png"
-            alt=""
-          />
-          <h2 class="categories_item_value">Drinks</h2>
-        </div>
-      </aside>
-      <section class="menu_item__container"></section>
+    <main>
+      <section id="basket_main_section">
+        <table>
+          <thead>
+            <tr>
+              <th class="product_th">Product</th>
+              <th>Price</th>
+              <th>Count</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <dic class="addings">
+          <div class="subtotal">
+            <p>Subtotal: <span class="subTotalPrice"></span></p>
+          </div>
+          <p class="removeAll">Remove All</p>
+        </dic>
+      </section>
     </main>
-    <!-- <footer>
+
+    <footer>
       <div class="footer_container">
         <img
           src="https://velikorodnov.com/wordpress/sushifushi/wp-content/themes/sushifushi/images/logo@2x.png"
@@ -191,10 +150,8 @@
         </ul>
         <p>Copyright © 2023 SushiFushi. All Rights Reserved.</p>
       </div>
-    </footer> -->
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/basket.js"></script>
   </body>
 </html>

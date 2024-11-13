@@ -56,6 +56,17 @@ button:hover {
   color: #000;
 }
 
+.countBtn {
+  border: none;
+  padding: 20px;
+}
+
+.countBtn:hover {
+  border: none;
+  background-color: #fff;
+  color: #040a1c;
+}
+
 header {
   width: 100%;
   background-color: #f8f8f8;
@@ -1329,4 +1340,92 @@ footer .footer_container p {
   #menu_main .menu_item__container .menu__item:hover {
     border: 2px solid #000;
   }
+}
+#basket_main_section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 20px 100px;
+}
+#basket_main_section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#basket_main_section table thead {
+  background-color: #dddee0;
+  border-collapse: collapse;
+}
+#basket_main_section table thead tr {
+  border: 1px solid #dddee0;
+}
+#basket_main_section table thead tr .product_th {
+  text-align: left;
+}
+#basket_main_section table thead tr th {
+  font-weight: 600;
+  color: #040a1c;
+  font-size: 18px;
+  font-family: Lato;
+  border: 1px solid #dddee0;
+  text-align: center;
+  padding: 15px 40px;
+}
+#basket_main_section table tbody tr {
+  padding: 0 40px;
+  border-bottom: 1px solid #dddee0;
+}
+#basket_main_section table tbody tr td {
+  padding: 0 40px;
+  text-align: center;
+}
+#basket_main_section table tbody tr td i {
+  color: #ca3c3f;
+  font-size: 20px;
+  cursor: pointer;
+}
+#basket_main_section table tbody tr .product_td {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  max-width: 500px;
+}
+#basket_main_section table tbody tr .product_td img {
+  width: 100px;
+}
+#basket_main_section table tbody tr .product_td div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+#basket_main_section table tbody tr .product_td div h2 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #040a1c;
+}
+#basket_main_section table tbody tr .product_td div p {
+  font-size: 14px;
+  color: #a8a7a8;
+}
+#basket_main_section .addings {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: row;
+  gap: 20px;
+  padding: 15px 60px;
+}
+#basket_main_section .addings .removeAll {
+  color: #ca3c3f;
+  font-size: 18px;
+  font-family: Lato;
+  font-weight: 400;
+  cursor: pointer;
+}
+#basket_main_section .addings .subtotal {
+  color: #040a1c;
+  font-size: 18px;
+  font-family: Lato;
+  font-weight: 400;
+  background-color: #dddee0;
+  padding: 20px;
 }
