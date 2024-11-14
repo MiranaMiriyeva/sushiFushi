@@ -154,7 +154,7 @@ fetch("https://672381a8493fac3cf24b2055.mockapi.io/sushi")
               localBasket = JSON.parse(localStorage.getItem("basket"));
               // localBasket.forEach((localBasketItem) => {
               let localBasketItem = localBasket.find(
-                (item) => item.id === btn.id
+                (item) => item.id == btn.id
               );
               if (localBasketItem) {
                 localBasketItem.count += 1;

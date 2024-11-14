@@ -47,11 +47,11 @@ categoriesItems.forEach((value) => {
       .then((data) =>
         data.forEach((item) => {
           if (
-            value.textContent.toLocaleLowerCase() ===
+            value.textContent.toLocaleLowerCase() ==
             item.category.toLocaleLowerCase()
           ) {
             handleTextContent(item);
-          } else if (value.textContent.toLocaleLowerCase() === "all menu") {
+          } else if (value.textContent.toLocaleLowerCase() == "all menu") {
             menuItemContainer.innerHTML += `
       `;
             handleTextContent(item);
@@ -109,7 +109,7 @@ function handleTextContent(item) {
       if (JSON.parse(localStorage.getItem("basket"))) {
         localBasket = JSON.parse(localStorage.getItem("basket"));
         // localBasket.forEach((localBasketItem) => {
-        let localBasketItem = localBasket.find((item) => item.id === btn.id);
+        let localBasketItem = localBasket.find((item) => item.id == btn.id);
         if (localBasketItem) {
           localBasketItem.count += 1;
           localStorage.setItem("basket", JSON.stringify(localBasket));
