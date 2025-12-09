@@ -21,7 +21,7 @@ let sushiMenuData = [
     kcal: 420,
     price: 17,
     salePercent: 0,
-    img: "https://sushi24.ge/images/thumbs/0000159_philadelphia-classic_510.png",
+    img: "https://www.bakenroll.az/en/image/fila-spec-main.jpg",
   },
   {
     id: 3,

@@ -1429,3 +1429,120 @@ footer .footer_container p {
   background-color: #dddee0;
   padding: 20px;
 }
+
+.sushi-gallery {
+  position: relative;
+  overflow: hidden;
+  /* RADIAL JAPANESE VIBE BACKGROUND */
+  background: radial-gradient(circle at top, #f8f8f8 0%, #f8f8f8 40%, rgb(228, 83, 83) 45%, black 100%);
+}
+.sushi-gallery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.35;
+  background: radial-gradient(circle at bottom right, rgba(255, 200, 220, 0.25), transparent 70%);
+}
+.sushi-gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.08;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.02), transparent 80%);
+}
+.sushi-gallery .sushi-gallery-container {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+.sushi-gallery .sushi-gallery-container .gallery-title {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: #2c0a16;
+  text-shadow: 0 2px 6px rgba(255, 185, 200, 0.35);
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  transform: translateZ(0);
+  transition: box-shadow 0.7s ease, transform 0.7s ease;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 170, 190, 0.25), transparent 70%);
+  opacity: 0;
+  transition: 0.6s ease;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.55) 50%, transparent 100%);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+  opacity: 0;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(70, 0, 30, 0.35);
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item:hover img {
+  transform: scale(1.35);
+  animation: animeBurst 0.7s ease-out;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item:hover::before {
+  opacity: 1;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .gallery-item:hover::after {
+  left: 130%;
+  opacity: 1;
+}
+@keyframes animeBurst {
+  0% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  35% {
+    transform: scale(1.42);
+    filter: brightness(1.05);
+  }
+  100% {
+    transform: scale(1.35);
+    filter: brightness(1);
+  }
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .item-1,
+.sushi-gallery .sushi-gallery-container .sushi-grid .item-12,
+.sushi-gallery .sushi-gallery-container .sushi-grid .item-8,
+.sushi-gallery .sushi-gallery-container .sushi-grid .item-4,
+.sushi-gallery .sushi-gallery-container .sushi-grid .item-11 {
+  grid-column: span 2;
+}
+.sushi-gallery .sushi-gallery-container .sushi-grid .item-4 {
+  grid-row: span 2;
+}
